@@ -1,0 +1,77 @@
+.content-contact {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    position: relative;
+    z-index: 9999;
+    background-color: #fff;
+    .img {
+        background: url('../img/contact/support.svg') no-repeat center center;
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        margin: auto auto 50px auto;
+    }
+    form {
+        input,
+        textarea {
+            padding: 25px 10px;
+            border: none;
+            border-radius: 15px;
+            color: #fff;
+            @include prefixer(box-shadow, 0px 0px 20px -5px rgba(0, 0, 0, 0.336), webkit moz o);
+            @include prefixer(transition, all .3s ease-in-out, webkit moz o);
+            opacity: .7;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        input {
+            margin-bottom: 30px;
+        }
+        textarea {
+            height: 200px;
+        }
+        .btn {
+            margin: 30px 25%;
+            width: 50%;
+        }
+    }
+    /* Social */
+    .social {
+        margin-left: 44%;
+        margin-top: 30px;
+        .icon-l1,
+        .icon-l2 {
+            div {
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+                &:hover .box{
+                    background-color: $secondColor;
+                }
+                .box {
+                    position: absolute;
+                    top: -10px;
+                    left: -16px;
+                    width: 72px;
+                    height: 62px;
+                    z-index: 1;
+                    background-color: $mainColor;
+                    border-radius: 10%;
+                    transform: rotate(30deg);
+                    @include prefixer(transition, all .4s ease-in-out, webkit moz o);
+                    &:hover {
+                        background-color: $secondColor;
+                    }
+                }
+                .icon {
+                    margin: 12px 13px;
+                    z-index: 2;
+                    position: relative;
+                    color: #fff;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

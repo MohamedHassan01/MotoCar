@@ -1,0 +1,18 @@
+.heading-line {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 47%;
+        width: 50px;
+        height: 2px;
+        background-color: $mainColor;
+    }
+}
+
+.hr {
+    width: 100px;
+    height: .1px;
+    background-color: $pColor;
+}

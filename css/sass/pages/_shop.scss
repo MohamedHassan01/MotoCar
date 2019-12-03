@@ -1,0 +1,170 @@
+.shop {
+    .navbar-brand {
+        color: #fff;
+        &:hover {
+            color: #fff;
+        }
+    }
+    .navbar-default {
+        .nav {
+            li {
+                a {
+                color: rgb(226, 226, 226);
+                &:hover {
+                    color: #fff;
+                }
+            }
+            &.active a {
+                color: #fff;
+            }
+            }
+        }
+    }
+    .bg-dark {
+        .navbar-brand {
+            color: #000;
+            &:hover {
+                color: #000;
+            }
+        }
+        .nav {
+            li {
+                a {
+                color: #000;
+                &:hover {
+                    color: $mainColor;
+                }
+            }
+            &.active a {
+                color: $mainColor;
+            }
+            }
+        }
+    }
+}
+
+.heading {
+    position: relative;
+    z-index: 9999;
+    background: url('../img/shop/bg-shop.jpg') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 70px;
+}
+
+/*** Section Shop ***/
+.shop-items {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background: #fff;
+    position: relative;
+    z-index: 9999;
+    .dec {
+        background: url('../img/shop/dec.png');
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 10px;
+        left: 0;
+    }
+    .item {
+        height: 300px;
+        margin-top: 50px;
+        overflow: hidden;
+        position: relative;
+        @include prefixer(transition, all 3s ease-in-out, webkit moz o);
+        img {
+            width: 100%;
+            height: 300px;
+            @include prefixer(transition, all 5s ease-in-out, webkit moz o);
+        }
+        &:hover img {
+            transform: scale(1.5);
+        }
+        .name {
+            position: absolute;
+            z-index: 999999;
+            top: 10px;
+            left: -280px;
+            background-color: $mainColor;
+            color: #fff;
+            width: 80%;
+            padding: 10px;
+            @include prefixer(transition, all 1s ease-in-out, webkit moz o);
+            h3 {
+                margin: 0;
+                padding: 0;
+            }
+        }
+        &:hover .name {
+            left: 0;
+        }
+        .price {
+            color: #fff;
+            width: 40%;
+            position: absolute;
+            z-index: 999999;
+            bottom: 10px;
+            right: -140px;
+            font-weight: bold;
+            padding: 14px;
+            font-size: 17px;
+            background-color: rgba(rgb(219, 47, 47), 1);
+            @include prefixer(transition, all 1s ease-in-out, webkit moz o);
+            p {
+                margin: 0;
+                padding: 0;
+            }
+        }
+        &:hover .price {
+            right: 0;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: 9999;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            @include prefixer(transition, all 1s ease-in-out, webkit moz o);
+            mix-blend-mode: soft-light;
+        }
+        &:hover::before {
+            top: 0;
+        }
+    }
+
+    .pages {
+        margin-top: 50px;
+        display: flex;
+        float: right;
+        background: #fff;
+        position: relative;
+        z-index: 9999;
+        top: -23px;
+        li {
+            border: 1px solid #000;
+            margin: 5px;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            @include prefixer(transition, all .3s ease-in-out, webkit moz o);
+            &.active {
+                background-color: $secondColor;
+                border: 1px solid $secondColor;
+                color: #fff;
+            }
+            &:hover {
+                background-color: $secondColor;
+                border: 1px solid $secondColor;
+                color: #fff;
+            }
+        }
+    }
+}

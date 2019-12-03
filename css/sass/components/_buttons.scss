@@ -1,0 +1,49 @@
+.btn {
+    width: 183px;
+    height: 45px;
+    color: #fff;
+    background-image: linear-gradient(to right, #4dadcf, #3f9fda, #598dde, #8276d5,);
+    border: none;
+    border-radius: 50px;
+    @include prefixer(box-shadow, 0px 0px 20px -10px rgba(0, 0, 0, 0.336), webkit moz o);
+    @include prefixer(transition, all .3s ease-in-out, webkit moz o);
+    &:hover {
+        opacity: .8;
+    }
+}
+
+.btn-log1,
+.btn-log2 {
+    width: 76px;
+    height: 33px;
+    padding: 5px;
+    color: #fff;
+    background: $mainColor;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    @include prefixer(box-shadow, 0px 0px 37px -11px rgba(0, 0, 0, 0.863), webkit moz o);
+    @include prefixer(transition, all .3s ease-in-out, webkit moz o);
+}
+.btn-log2 {
+    background: #fff;
+    color: #000;
+    margin-left: 15px;
+    &:hover {
+        background: $mainColor;
+        color: #fff;
+    }
+}
+.btn-log1 {
+    &:hover {
+        background: #fff;
+        color: #000;
+    }
+}
+
+.btn-shop {
+    width: 100%;
+    margin-top: 20px;
+    background: $mainColor;
+    @include prefixer(box-shadow, 0px 0px 20px -5px rgba(0, 0, 0, 0.863), webkit moz o);
+}

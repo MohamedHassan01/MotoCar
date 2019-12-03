@@ -1,0 +1,33 @@
+/*********************************************************
+    Main Style Sheet
+    Project:        MotoCar company buying cars
+    Version:        1.0
+    Author:         Almoayedi
+    Primary use:    Cars Company, E-Commerce
+*********************************************************/
+
+/********************************************************
+    Body
+        Page Loader
+        Header
+        Home
+        Features
+        Testimonials
+        Team
+        Hire Us
+        Last Offers
+        Footer
+        Shop
+********************************************************/
+
+@import 'sass/helpers/variables';
+@import 'sass/helpers/mixins';
+@import 'sass/components/headings';
+@import 'sass/components/buttons';
+
+@import 'sass/pages/global';
+@import 'sass/layout/header';
+@import 'sass/pages/homepage';
+@import 'sass/pages/shop';
+@import 'sass/pages/contact';
+@import 'sass/layout/footer';

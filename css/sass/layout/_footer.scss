@@ -1,0 +1,74 @@
+.rev {
+    height: 320px;
+    position: relative;
+    @media #{$maxMobile} {
+        height: 600px;
+    }
+}
+.footer {
+    padding-top: 50px;
+    background: url('../img/bg-footer.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    .column {
+        h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        p {
+            color: $fourdColor;
+            font-size: 14px;
+        }
+        .social {
+            margin-top: 20px;
+            color: #fff;
+            .icon {
+                margin-right: 10px;
+                cursor: pointer;
+                @include prefixer(transition, all .3s ease-in-out, webkit moz o);
+                &:hover {
+                    color: $secondColor;
+                }
+            }
+        }
+        .categ {
+            color: $fourdColor;
+            li {
+                margin-top: 5px;
+                width: 50%;
+                @include prefixer(transition, all .3s ease-in-out, webkit moz o);
+                &:hover {
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+        }
+        .info {
+            p {
+                span {
+                    margin-right: 10px;
+                }
+                color: #fff;
+            }
+        }
+    }
+    .created {
+        background-color: #333;
+        p {
+            color: #b1b1b1;
+            margin: 0;
+            padding: 8px;
+            a {
+                color: #fff;
+                @include prefixer(transition, all .3s ease-in-out, webkit moz o);
+                &:hover {
+                    text-decoration: none;
+                    color: $secondColor;
+                }
+            }
+        }
+    }
+}
